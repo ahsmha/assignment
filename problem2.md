@@ -1,3 +1,4 @@
+## Explanation
 The given code snippet demonstrates a pattern commonly used in concurrent programming called the worker pool. Let's go through the code and understand its purpose and behavior.
 
 ```go
@@ -38,11 +39,11 @@ Finally, the code prints "Hello" from the main goroutine. However, since the wor
 
 Overall, the code snippet implements a worker pool pattern. The main goroutine sends functions to the worker goroutines via a channel, and the worker goroutines concurrently execute these functions. This pattern allows for parallel processing of tasks, which can be useful in various scenarios such as:
 
-    **Asynchronous task execution**: The main goroutine can submit tasks to the worker pool and continue its own execution without waiting for the tasks to complete. This is particularly useful when there are time-consuming or blocking operations that can be offloaded to worker goroutines while the main goroutine handles other responsibilities.
+**Asynchronous task execution**: The main goroutine can submit tasks to the worker pool and continue its own execution without waiting for the tasks to complete. This is particularly useful when there are time-consuming or blocking operations that can be offloaded to worker goroutines while the main goroutine handles other responsibilities.
 
-    **Parallelizing computations**: If there are computationally intensive tasks that can be divided into smaller units of work, the worker pool can distribute the workload across multiple goroutines, leveraging the available CPU cores for parallel execution and potentially improving overall performance.
+**Parallelizing computations**: If there are computationally intensive tasks that can be divided into smaller units of work, the worker pool can distribute the workload across multiple goroutines, leveraging the available CPU cores for parallel execution and potentially improving overall performance.
 
-    **Handling concurrent requests**: In scenarios where there are multiple requests arriving concurrently, the worker pool can help manage the request handling by dispatching each request to a worker goroutine. This can ensure that the requests are processed in parallel, preventing bottlenecks and improving response times.
+**Handling concurrent requests**: In scenarios where there are multiple requests arriving concurrently, the worker pool can help manage the request handling by dispatching each request to a worker goroutine. This can ensure that the requests are processed in parallel, preventing bottlenecks and improving response times.
 
 By utilizing the worker pool pattern, developers can achieve better concurrency and parallelism in their applications, enabling efficient utilization of resources and improved overall performance.
 ## Use Case: Concurrent Kafka Message Processing
